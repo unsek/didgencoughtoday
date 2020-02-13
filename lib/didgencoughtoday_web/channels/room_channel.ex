@@ -2,6 +2,7 @@ defmodule DidgencoughtodayWeb.RoomChannel do
   use DidgencoughtodayWeb, :channel
 
   alias Didgencoughtoday.Counter
+  alias Didgencoughtoday.Counter.Cough
 
   def join("room:lobby", _message, socket) do
     {:ok, socket}
@@ -12,6 +13,7 @@ defmodule DidgencoughtodayWeb.RoomChannel do
   end
 
   def handle_in("increment", %{"body" => body}, socket) do
+    Counter.update_cough(%Cough{id: 1}, %{number: body})
     broadcast!(socket, "increment", %{body: body})
     {:noreply, socket}
   end

@@ -1,1 +1,14 @@
-<div id="counter"><%= @cough.number %></div>
+<div class="main-container">
+    <div class="header-title">
+        <p>Cough Counter</p>
+    </div>
+    <div class="content-counter">
+    <%= @cough.number %>
+    </div>
+    <div class="counter-action">
+        Press Space to Add Cough
+    </div>
+</div>
+<div class="status-footer">
+    Last Updated: <span>5min ago</span>
+</div>
