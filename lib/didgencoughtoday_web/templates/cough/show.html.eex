@@ -1,0 +1,13 @@
+<h1>Show Cough</h1>
+
+<ul>
+
+  <li>
+    <strong>Number:</strong>
+    <%= @cough.number %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.cough_path(@conn, :edit, @cough) %></span>
+<span><%= link "Back", to: Routes.cough_path(@conn, :index) %></span>

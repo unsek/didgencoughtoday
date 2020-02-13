@@ -1,0 +1,5 @@
+<h1>Edit Cough</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.cough_path(@conn, :update, @cough)) %>
+
+<span><%= link "Back", to: Routes.cough_path(@conn, :index) %></span>

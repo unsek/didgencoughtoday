@@ -16,7 +16,7 @@ defmodule DidgencoughtodayWeb.Router do
   scope "/", DidgencoughtodayWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    resources "/", CoughController
   end
 
   # Other scopes may use custom stacks.
