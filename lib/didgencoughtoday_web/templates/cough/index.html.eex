@@ -10,5 +10,5 @@
     </div>
 </div>
 <div class="status-footer">
-    Last Updated: <span>5min ago</span>
+    Last Updated: <span><%= @cough.updated_at %></span>
 </div>
