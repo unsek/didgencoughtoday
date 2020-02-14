@@ -6,4 +6,5 @@ default_secret_key_base = :crypto.strong_rand_bytes(43) |> Base.encode64
 config :didgencoughtoday, DidgencoughtodayWeb.Endpoint,
   http: [port: port],
   url: [host: "localhost", port: port],
-  secret_key_base: System.get_env("SECRET_KEY_BASE") || default_secret_key_base
+  secret_key_base: System.get_env("SECRET_KEY_BASE") || default_secret_key_base,
+  check_origin: ["//dgct-web.onrender.com", "//didgencough.today"]

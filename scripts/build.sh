@@ -12,8 +12,8 @@ export APP_VSN="$(grep 'version:' mix.exs | cut -d '"' -f2)"
 rm -rf "_build"
 
 # Compile app and assets
-mix ecto.setup
 mix deps.get --only prod
+mix ecto.migrate
 mix compile
 cd assets && npm install && npm run deploy && cd ..
 

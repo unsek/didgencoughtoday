@@ -11,7 +11,9 @@ defmodule DidgencoughtodayWeb.Endpoint do
   ]
 
   socket "/socket", DidgencoughtodayWeb.UserSocket,
-    websocket: true,
+    websocket: [
+      check_origin: ["https://www.didgencough.today"]
+    ],
     longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.

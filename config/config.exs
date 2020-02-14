@@ -16,7 +16,7 @@ config :didgencoughtoday, DidgencoughtodayWeb.Endpoint,
   secret_key_base: "UXXmB5J3SdN57MXEM9QSdh/6LqNAs+X+4ghUWYWwHGF1JvAO0fJZ/vcL/WcXtSdT",
   render_errors: [view: DidgencoughtodayWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Didgencoughtoday.PubSub, adapter: Phoenix.PubSub.PG2],
-  live_view: [signing_salt: "76tjJNs5"]
+  check_origin: ["//dgct-web.onrender.com", "//didgencough.today"]
 
 # Configures Elixir's Logger
 config :logger, :console,

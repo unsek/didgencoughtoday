@@ -1,6 +1,6 @@
 <div class="main-container">
     <div class="header-title">
-        <p>Cough Counter</p>
+        <p>Gen Cough Counter</p>
     </div>
     <div class="content-counter">
     <%= @cough.number %>
